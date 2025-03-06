@@ -1,0 +1,16 @@
+<div class="pokemon-detail-container" *ngIf="pokemon">
+    <div class="pokemon-card" [style.backgroundColor]="getColorByType(pokemon.types?.[0]?.type?.name)">
+        <img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/' + pokemon.id + '.gif'" [alt]="pokemon.name">
+        <h2>{{ pokemon.name | titlecase }}</h2>
+    </div>
+
+    <div class="pokemon-info">
+        <h3>Tipo: {{ pokemon.types?.[0]?.type?.name | titlecase }}</h3>
+        <h3>Peso: {{ pokemon.weight / 10 }} kg</h3>
+        <h3>Altura: {{ pokemon.height / 10 }} m</h3>
+        <h3>Movimientos:</h3>
+        <ul>
+            <li *ngFor="let move of pokemon.moves?.slice(0, 2)">{{ move.move.name | titlecase }}</li>
+        </ul>
+    </div>
+</div>

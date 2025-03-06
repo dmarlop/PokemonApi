@@ -1,0 +1,20 @@
+<div class="pokemon-container">
+    <h2>Lista de Pokémon</h2>
+    
+    <div class="pokemon-grid">
+        <div class="pokemon-card" *ngFor="let pokemon of pokemons" 
+             [style.backgroundColor]="getColorByType(pokemon.type)">
+             <a [routerLink]="['/pokemon', pokemon.id]">
+            <img [src]="pokemon.imageUrl" [alt]="pokemon.name">
+            <p>{{ pokemon.name | titlecase }}</p>
+            <span class="type-badge">{{ pokemon.type | titlecase }}</span>
+        </a>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <button (click)="previousPage()" [disabled]="!previous || numPag === 1">⬅️ Anterior</button>
+        
+        <button (click)="nextPage()" [disabled]="!next">Siguiente ➡️</button>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+.pokemon-detail-container {
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;  /* Centra verticalmente */
+    height: 80vh; /* Ocupa toda la altura de la pantalla */
+    gap: 40px; /* Espacio entre la tarjeta y los detalles */
+    margin-bottom: 80px;
+}
+
+.pokemon-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 200px; /* Aumentamos el ancho */
+    height: 260px; /* Hacemos la tarjeta más grande */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-card img {
+    width: 200px; /* Imagen más grande */
+    height: 200px;
+}
+
+.pokemon-info {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pokemon-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.pokemon-info ul {
+    list-style: none; /* 🔥 Elimina los puntos de la lista */
+    padding: 0;
+}
+
+.pokemon-info li {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto de hover para los movimientos */
+.pokemon-info li:hover {
+    background-color: rgba(255, 205, 50, 0.8);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
